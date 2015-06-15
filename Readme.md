@@ -1,9 +1,9 @@
 # [Base62.js](http://libraries.io/npm/base62)
-[![build status](https://secure.travis-ci.org/andrew/base62.js.svg)](http://travis-ci.org/andrew/base62.js)
+[![build status](https://secure.travis-ci.org/penciltim/base62.js.svg)](http://travis-ci.org/penciltim/base62.js)
 [![npm version](https://badge.fury.io/js/base62.svg)](http://badge.fury.io/js/base62)
-[![Dependency Status](https://david-dm.org/andrew/base62.js.svg?theme=shields.io)](https://david-dm.org/andrew/base62.js)
-[![devDependency Status](https://david-dm.org/andrew/base62.js/dev-status.svg?theme=shields.io)](https://david-dm.org/andrew/base62.js#info=devDependencies)
-[![Gitter chat](http://img.shields.io/badge/gitter-andrew/base62.js-brightgreen.svg)](https://gitter.im/andrew/base62.js)
+[![Dependency Status](https://david-dm.org/penciltim/base62.js.svg?theme=shields.io)](https://david-dm.org/penciltim/base62.js)
+[![devDependency Status](https://david-dm.org/penciltim/base62.js/dev-status.svg?theme=shields.io)](https://david-dm.org/penciltim/base62.js#info=devDependencies)
+[![Gitter chat](http://img.shields.io/badge/gitter-penciltim/base62.js-brightgreen.svg)](https://gitter.im/penciltim/base62.js)
 
 A javascript Base62 encode/decoder for node.js
 
@@ -35,11 +35,20 @@ Base62.setCharacterSet("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrst
 Base62.encode(999)  // 'G7'
 Base62.decode('G7') // 999
 ```
+### Custom Digits Length Example
+The default digits is 6, if the length of digits is less than 6, it will add zero in front of the output string. You can set your own length of digits.
+
+```javascript
+Base62 = require('Base62')
+Base62.encode(999) // '0000G7'
+Base62.setDigits(8)
+Base62.encode(999) // '000000G7'
+```
 
 ## Development
 
-Source hosted at [GitHub](http://github.com/andrew/base62.js).
-Report Issues/Feature requests on [GitHub Issues](http://github.com/andrew/base62.js).
+Source hosted at [GitHub](http://github.com/penciltim/base62.js).
+Report Issues/Feature requests on [GitHub Issues](http://github.com/penciltim/base62.js).
 
 ### Note on Patches/Pull Requests
 
@@ -50,4 +59,4 @@ Report Issues/Feature requests on [GitHub Issues](http://github.com/andrew/base6
 
 ## Copyright
 
-Copyright (c) 2015 Andrew Nesbitt. See [LICENSE](https://github.com/andrew/base62.js/blob/master/LICENSE) for details.
+Copyright (c) 2015 penciltim. See [LICENSE](https://github.com/penciltim/base62.js/blob/master/LICENSE) for details.
